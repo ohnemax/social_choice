@@ -243,7 +243,11 @@ class Aggregator():
                         candidate_points -= 1
                 if candidate_points > 0:
                     points[candidate] += 1
+                elif candidate_points < 0:
+                    points[rival] += 1
                 else:
+                    print(candidate_points)
+                    points[candidate] += 1
                     points[rival] += 1
 
         print('Pairwise comparison points:', points)
